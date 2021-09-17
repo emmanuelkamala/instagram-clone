@@ -1,9 +1,11 @@
 class PostsController < ApplicationController
 
   def new 
+    @post = Post.new
   end
 
   def create 
+    @post = Post.new(post_params)
   end
 
   def Show
@@ -11,7 +13,7 @@ class PostsController < ApplicationController
 
   private 
    
-    def set_params
-      params.require(:post).permit(:image)
+    def post_params
+      params.require(:post).permit(:image, :image_cache)
     end
 end
