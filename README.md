@@ -1,24 +1,47 @@
-# README
+# Instagram Clone
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A build up of the core functionalities of the instagram app. A user can create an account, follow other users, create posts, comment on other user's posts and edit his/her profile's details
 
-Things you may want to cover:
+## Built With
 
-* Ruby version
+- Ruby 3
+- ReactJS
+- Rails 6
+- Postgresql
 
-* System dependencies
+## Live Demo
 
-* Configuration
+Coming soon...
 
-* Database creation
+## Getting Started
 
-* Database initialization
+To get a local copy up and running follow these simple example steps.
 
-* How to run the test suite
+### Prerequisites
+You need to have Ruby 3 or above and Rails 6.0.2.1 or above installed
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+### Setup
 
-* ...
+# Install
+Clone the repo and then install the needed gems:
+
+ bundle install
+
+ # Create and Migrate the database:
+
+ rails db:create<br>
+ rails db:migrate
+
+ # Run the app in a local server:
+
+ rails server
+
+
+## Author
+
+👤 **Author**
+
+- Github: [@githubhandle](https://github.com/emmanuelkamala)
+- Twitter: [@twitterhandle](https://twitter.com/ejkamala)
+- Linkedin: [linkedin](https://linkedin.com/emmanuelkamala)
