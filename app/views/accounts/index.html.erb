@@ -9,6 +9,12 @@
             <%= link_to post.account.username, profile_path(post.account.username), class: "text-dark" %>
           </div>
           <%= image_tag post.image.url, class: "img img-fluid" %>
+
+          <div class="post-details">
+            <p><strong><%= post.total_likes %> likes</p></strong>
+            <p><strong><%= link_to post.account.username, profile_path(post.account.username), class: "text-dark" %></p></strong>
+            <%= simple_format post.description %>
+          </div>
         </div>
       <% end %>
     </div>

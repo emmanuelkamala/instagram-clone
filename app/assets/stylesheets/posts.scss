@@ -3,13 +3,19 @@
 }
 
 .post-meta {
-  background-color: #fff;
+  background-color: #fafafa;
   text-align: left;
   font-weight: bold;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid rgb(230, 229, 229);
 
   img {
     margin: 0 10px;
   }
+}
+
+.post-details {
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
 }
