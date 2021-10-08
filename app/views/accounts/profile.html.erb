@@ -4,6 +4,7 @@
     </div>
     <div class="col-8 text-start">
       <h1><%= @account.full_name %></h1>
+      <%= link to "Edit profile", edit_account_registration_path, class: "btn btn-secondary" %>
       <div class="profile-stats"><%= @account.posts.count %> posts</div>
       <div class="profile-stats"><%= @account.total_followers %> followers</div>
       <div class="profile-stats"><%= @account.total_following %> following</div>
