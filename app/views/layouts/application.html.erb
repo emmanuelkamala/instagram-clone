@@ -19,15 +19,11 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
+          <% if account_signed_in? %>
+            <%= render "layouts/account_nav" %>
+          <% else %>
+            <%= render "layouts/public_nav" %>
+          <% end %>
         </ul>
       </div>
     </div>
