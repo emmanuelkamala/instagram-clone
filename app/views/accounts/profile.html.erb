@@ -1,18 +1,36 @@
 <div class="container">
   <div class="row">
-    <div class="col-4">
+    <div class="col-4 d-flex justify-content-center">
       <%= image_tag @account.image.url, class: "img-circle" %>
     </div>
     <div class="col-8 text-start">
-      <h1><%= @account.full_name %></h1>
-      <%= link_to "Edit profile", edit_account_registration_path, class: "btn btn-secondary" %>
-      <div class="profile-stats"><%= @account.posts.count %> posts</div>
-      <div class="profile-stats"><%= @account.total_followers %> followers</div>
-      <div class="profile-stats"><%= @account.total_following %> following</div>
+      <div class="profile">
+        <div class="profile-title">
+          <div class="profile-username"><h3><%= @account.username %></h3></div>
+          <div><%= link_to "Edit profile", edit_account_registration_path, class: "btn btn-outline-secondary" %></div>
+        </div>
+        <div class="profile-stats">
+          <div><%= @account.posts.count %> posts</div>
+          <div><%= @account.total_followers %> followers</div>
+          <div><%= @account.total_following %> following</div>
+        </div>
 
-      <p><%= @account.full_name %></p>
-      <p><%= @account.description %></p>
-      <p><%= link_to @accont.website if @account.website.present? %></p>
+        <h5><%= @account.full_name %></h5>
+        <%= simple_format @account.description %>
+        <p><%= link_to @account.website if @account.website.present? %></p>
+      </div>
     </div>
+  </div>
+  <hr />
+  <div class="row">
+    <% @posts.each do |post| %>
+      <div class="col-4">
+        <div class="profile-posts">
+          <div class="insta-post">
+            <%= image_tag post.image.url, class: "img img-fluid" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>

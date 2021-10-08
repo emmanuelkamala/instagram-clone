@@ -23,7 +23,32 @@ body {
 }
 
 .img-circle {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
+}
+
+.profile {
+  width: 25vw;
+}
+
+.profile-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile-username {
+  color: #999
+}
+
+.profile-stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.profile-posts {
+  margin-top: 50px;
 }
